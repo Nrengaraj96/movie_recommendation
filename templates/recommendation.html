@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<style>
+p  {
+	color: white;
+        font-size: 20px;
+        font-weight: bold;
+}
+h1 {
+       color: yellowgreen;
+       font-size: 50px;
+       font-weight: bold;
+}
+</style>
+	<body style="background-image:url({{ url_for ('static',filename='images/recommendbg.jpg')}}); background-position: center; background-repeat: no-repeat; background-size: cover;"  >
+               {% autoescape false %}
+               <center><h1>Congratulations!! Movies we think you'll Love B) </h1><p> {{string.decode('utf-8')}}</p></center>
+               {% endautoescape %}
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+<head>
+	<title>MovieRex</title>
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+	<link href="../static/css/recommend.css" rel="stylesheet">
+</head>
+
+<style>
+h3{
+color:red;
+}
+.form-getmovie { 
+    display: block;
+    margin-top:1em;
+}
+</style>
+
+<body style="background-image:url({{url_for('static', filename='images/Curtains-opening.jpg')}});background-position: center;background-size: cover;"  >
+	<div class="container">
+	<div class="header">
+	<nav>
+		<ul class="nav nav-pills pull-right">
+		<li role="presentation" ><a href="main">Home &nbsp;</a></li>
+		<li role="presentation"><a href="#">Sign In &nbsp;</a></li>
+		<li role="presentation" class="active"><a href="#">Sign Up &nbsp;</a></li>
+		</ul>
+	</nav>
+        <img src="../static/images/logo.jpg" style="width:50px;height:50px;">
+	<h3>MovieRex</h3>
+	</div>
+<div class="bg"></div>
+		<form method=post action="http://localhost:5000/recommendation">
+			<label for="movieID" class="sr-only">Name</label>
+			<input type="movieID" name="movieID" id="movieID" class="form-control" placeholder="Enter Movie ID" required autofocus>
+			<input type=submit value ="Recommend Now!" id="btnreco" class="btn btn-lg btn-primary btn-block"></input>
+			<a class="btn btn-lg btn-primary btn-block" href="showmovies" role="button">Show Movies</a>
+		</form>
+       	<img src="../static/images/genre123.jpg" style="float:left;width:1250px;height:150px;">
+		<img src="../static/images/genre456.jpg" style="float:right;width:1250px;height:150px;">
+	</div>
+</body>
+</html>
